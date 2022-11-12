@@ -10,7 +10,7 @@
 
     <link rel="canonical" href="https://venge.io" />
 
-    <link rel="icon" href="favicon-96x96.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon-96x96.png" type="image/x-icon">
     <meta content="https://venge.io/thumbnail.jpg" property="og:image">
 
     <meta property="og:type" content="website">
@@ -18,7 +18,7 @@
     <meta property="og:title" content="Play Venge.io!">
     <meta property="og:description" content="Click on this link to start a game with your friend! Venge is an objective-based first-person shooter. Play it on browser, no download, and free!">
 
-    <meta property="og:url" content="https://venge.io/">
+    <meta property="og:url" content="https://therealdigitalmaster.github.io/vengeio">
     <meta property="og:site_name" content="venge.io">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
@@ -88,9 +88,9 @@
 
     <script src="//game-cdn.poki.com/scripts/v2/poki-sdk.js"></script>
 
-    <script type="text/javascript" src="adblock.js"></script>
-    <script type="text/javascript" src="playcanvas-stable.min.js?v=1.1.45"></script>
-    <script type="text/javascript" src="__settings__.js?v=1.1.38"></script>
+    <script type="text/javascript" src="js/adblock.js"></script>
+    <script type="text/javascript" src="js/playcanvas-stable.min.js?v=1.1.45"></script>
+    <script type="text/javascript" src="js/__settings__.js?v=1.1.38"></script>
 
     <!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
     <script type="text/javascript" async=true>
@@ -344,7 +344,7 @@
 
                 <p>In addition, customize your experience in highly customizable controls and user interface, you can get your place in leaderboards, build your clan and fight as a team, easily invite friends and add them to your friends list, make your own weapon skin and submit to our Discord server, make your own custom map and play it with your friends, sell your items in player market, earn VG and; buy new characters weapon skins, character skins, charms, emotes and sprays.</p>
 
-                <p>Play <a href="https://venge.io/?fps-game">fps io game</a> now!</p>
+                <p>Play <a href="https://therealdigitalmaster.github.io/vengeio/?fps-game">fps io game</a> now!</p>
             </div>
             <div v-if="!loaded" id="full-screen-loading" :style="{'backgroundImage' : 'url(Thumbnail-00' + thumbnailIndex + '.jpg)'}">
                 <a id="logo" href=""><img src="images/Logo.png"></a>
@@ -537,7 +537,7 @@
 
                 <div v-if="quest.active" class="popup popup-inspect popup-quest">
                     <div class="popup-title">
-                        <img src="images/icons/BlackCoin-Icon.png" alt="Quests"> Quests
+                        <img src="images/BlackCoin-Icon.png" alt="Quests"> Quests
                         <div class="popup-close" v-on:click="popupClose()"></div>
                     </div>
                     <div class="popup-content">
@@ -549,11 +549,11 @@
                                     <p>{{item.title}}</p>
                                     <div class="quest-rewards">
                                         <div class="reward">
-                                            <img src="images/icons/Jump-Icon.png" alt="">
+                                            <img src="images/Jump-Icon.png" alt="">
                                             <p>{{item.xp_reward}}</p>
                                         </div>
                                         <div class="reward">
-                                            <img src="images/icons/Gold.png" alt="">
+                                            <img src="images/Gold.png" alt="">
                                             <p>{{item.coin_reward}}</p>
                                         </div>
                                     </div>
@@ -565,12 +565,12 @@
                                         <p>{{item.completed_goal}}</p>
 
                                         <button v-if="item.can_claim" @click="claimQuestReward(item.index)" class="quest-claim button-sound">
-                                            <img src="images/icons/Check-Icon.png" alt="">
+                                            <img src="images/Check-Icon.png" alt="">
                                             Claim Reward
                                         </button>
 
                                         <div v-if="item.is_claimed" class="quest-claimed">
-                                            <img src="images/icons/Check-Icon.png" alt="">
+                                            <img src="images/Check-Icon.png" alt="">
                                             <p>Reward Claimed!</p>
                                         </div>
                                     </div>
@@ -581,7 +581,7 @@
                     <div v-if="quest.can_reset"  class="popup-bottom-content">
                         <button class="btn btn-primary button-sound" @click="newQuests()">
                             Get New Quests 
-                            <img src="images/icons/Caret-Icon.png" alt="">
+                            <img src="images/Caret-Icon.png" alt="">
                         </button>
                     </div>
                 </div>
@@ -614,7 +614,7 @@
                         class="menu-button quest-menu hint--left button-sound" 
                         aria-label="Quest List"
                         href="javascript:;">
-                            <img src="images/icons/BlackCoin-Icon.png">
+                            <img src="images/BlackCoin-Icon.png">
                             <p>{{profile.completed_quests}} / 3 </p>
                         </a>
 
@@ -1877,7 +1877,7 @@
 
                                 <button class="shop-unlock" :class="{'shop-equip' : shop.canUnlockWithAds > 0}" v-on:click="unlockCrateWithAds(shop.activeItem)">
                                     <div v-if="shop.isUnlocking" class="loader loader-center"></div>
-
+                                                                                                                                                    
                                     <span v-if="!shop.isUnlocking">
                                         <span v-if="shop.canUnlockWithAds === 0">
                                             <i class="fa fa-play-circle-o" aria-hidden="true"></i> Redeem 
